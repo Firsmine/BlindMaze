@@ -22,17 +22,17 @@
         <div class="login-form">
           <input
             type="text"
-            id="username-input"
+            id="usernameInput"
             placeholder="Your name"
             maxlength="15"
             autocomplete="off"
           />
-          <button id="btn-play" disabled>Start</button>
+          <button id="btnplay" disabled>Start</button>
         </div>
 
         <div class="welcome-actions">
-          <button id="btn-open-leaderboard">Leaderboard</button>
-          <button id="btn-open-instructions">Show Instructions</button>
+          <button id="btnOpenLeaderboard">Leaderboard</button>
+          <button id="btnOpenInstructions">Show Instructions</button>
         </div>
       </div>
 
@@ -54,9 +54,9 @@
         <div id="mazeGridWrapper"></div>
       </div>
 
-      <div id="modal-instructions" class="modal-overlay hidden">
+      <div id="modalInstructions" class="modal-overlay hidden">
         <div class="modal-box">
-          <button class="modal-close-x" id="btn-close-instructions">
+          <button class="modal-close-x" id="btnCloseInstructions">
             &times;
           </button>
           <h2>Instructions</h2>
@@ -72,20 +72,20 @@
             </li>
             <li>If you don't have lives left, game over.</li>
           </ol>
-          <button class="modal-action-btn" id="btn-confirm-instructions">
+          <button class="modal-action-btn" id="btnConfirmInstructions">
             Start
           </button>
         </div>
       </div>
 
-      <div id="modal-leaderboard" class="modal-overlay hidden">
+      <div id="modalLeaderboard" class="modal-overlay hidden">
         <div class="modal-box">
-          <button class="modal-close-x" id="btn-close-leaderboard">
+          <button class="modal-close-x" id="btnCloseLeaderboard">
             &times;
           </button>
           <h2>Leaderboard</h2>
           <div class="table-scroll-area">
-            <table id="table-score-board">
+            <table id="tableScoreBoard">
               <thead>
                 <tr>
                   <th style="width: 15%">#</th>
@@ -93,25 +93,25 @@
                   <th style="width: 30%">Stage</th>
                 </tr>
               </thead>
-              <tbody id="leaderboard-table-body"></tbody>
+              <tbody id="leaderboardTableBody"></tbody>
             </table>
           </div>
         </div>
       </div>
 
-      <div id="modal-gameover" class="modal-overlay hidden">
+      <div id="modalGameover" class="modal-overlay hidden">
         <div class="modal-box confirmation-view">
           <h2>Game Over!</h2>
           <div class="gameover-summary">
-            <p>Username: <strong id="summary-player-name">-</strong></p>
-            <p>Stage: <strong id="summary-stage-count">-</strong></p>
+            <p>Username: <strong id="summaryPlayerName">-</strong></p>
+            <p>Stage: <strong id="summaryStageCount">-</strong></p>
           </div>
           <div class="gameover-buttons">
-            <button id="btn-save-score" class="modal-action-btn">
+            <button id="btnSaveScore" class="modal-action-btn">
               Save Score
             </button>
             <button
-              id="btn-cancel-gameover"
+              id="btnCancelGameover"
               class="modal-action-btn secondary-btn"
             >
               Cancel
@@ -121,7 +121,6 @@
       </div>
     </div>
 
-    <script src="/js/script.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/leaderboard.js"></script>
     <script src="js/timer.js"></script>
