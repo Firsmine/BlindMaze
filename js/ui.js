@@ -1,7 +1,7 @@
 (function () {
   window.BlindMazeUI = {
     showScreen: function (screenId) {
-      let screens = document.querySelectorAll(".screen-view");
+      let screens = document.querySelectorAll(".screen");
       for (let i = 0; i < screens.length; i++) {
         screens[i].classList.add("hidden");
       }

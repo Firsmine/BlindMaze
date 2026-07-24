@@ -21,7 +21,7 @@
       state.lives = 3;
       state.hintUsed = false;
       state.isGameActive = true;
-      window.BlindMazeUI.showScreen("game-screen");
+      window.BlindMazeUI.showScreen("gameScreen");
       this.loadStage();
     },
     loadStage: function () {
@@ -105,7 +105,7 @@
       document.getElementById("summaryPlayerName").textContent = state.username;
       document.getElementById("summaryStageCount").textContent =
         state.currentStage;
-      window.BlindMazeUI.openModal("modal-gameover");
+      window.BlindMazeUI.openModal("modalGameover");
     },
   };
 })();

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let usernameInput = document.getElementById("usernameInput");
-  let btnPlay = document.getElementById("btnplay");
+  let btnPlay = document.getElementById("btnPlay");
   // USERNAME VALIDATION
   if (usernameInput && btnPlay) {
     usernameInput.addEventListener("input", function () {
