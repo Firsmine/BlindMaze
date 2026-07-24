@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let usernameInput = document.getElementById("usernameInput");
-  let btnPlay = document.getElementById("btnPlay");
+  let btnPlay = document.getElementById("btnplay");
   // USERNAME VALIDATION
   if (usernameInput && btnPlay) {
     usernameInput.addEventListener("input", function () {
@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
   let btnConfirmInst = document.getElementById("btnConfirmInstructions");
   if (btnOpenInst) {
     btnOpenInst.addEventListener("click", function () {
-      window.BlindMazeUI.openModal("modal-instructions");
+      window.BlindMazeUI.openModal("modalInstructions");
     });
   }
   if (btnCloseInst) {
     btnCloseInst.addEventListener("click", function () {
-      window.BlindMazeUI.closeModal("modal-instructions");
+      window.BlindMazeUI.closeModal("modalInstructions");
     });
   }
   if (btnConfirmInst) {
     btnConfirmInst.addEventListener("click", function () {
-      window.BlindMazeUI.closeModal("modal-instructions");
+      window.BlindMazeUI.closeModal("modalInstructions");
       if (usernameInput) {
         let nameValue = usernameInput.value.trim();
         if (nameValue.length > 0) {
@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btnOpenLeader) {
     btnOpenLeader.addEventListener("click", function () {
       window.BlindMazeLeaderboard.renderLeaderboardTable();
-      window.BlindMazeUI.openModal("modal-leaderboard");
+      window.BlindMazeUI.openModal("modalLeaderboard");
     });
   }
   if (btnCloseLeader) {
     btnCloseLeader.addEventListener("click", function () {
-      window.BlindMazeUI.closeModal("modal-leaderboard");
+      window.BlindMazeUI.closeModal("modalLeaderboard");
     });
   }
   // HINT BUTTON
@@ -76,14 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
     btnSaveScore.addEventListener("click", function () {
       let state = window.BlindMazeState;
       window.BlindMazeLeaderboard.saveScore(state.username, state.currentStage);
-      window.BlindMazeUI.closeModal("modal-gameover");
-      window.BlindMazeUI.showScreen("welcome-screen");
+      window.BlindMazeUI.closeModal("modalGameover");
+      window.BlindMazeUI.showScreen("welcomeScreen");
     });
   }
   if (btnCancelGameOver) {
     btnCancelGameOver.addEventListener("click", function () {
-      window.BlindMazeUI.closeModal("modal-gameover");
-      window.BlindMazeUI.showScreen("welcome-screen");
+      window.BlindMazeUI.closeModal("modalGameover");
+      window.BlindMazeUI.showScreen("welcomeScreen");
     });
   }
   // ARROW CONTROLLER
